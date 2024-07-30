@@ -23,6 +23,7 @@ public class BaseComponent2 {
 				setBaseUri("https://keytrcrud.herokuapp.com/").
 				setBasePath("api/users/").
 				setContentType(ContentType.JSON). 
+				//header("Authorization", "Bearer " + token)
 				addHeader("accept", "application/json").build();
 				
 		responseSpec = new ResponseSpecBuilder(). 
