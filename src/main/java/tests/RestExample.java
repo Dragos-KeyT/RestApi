@@ -1,6 +1,7 @@
 package tests;
 
 import static org.testng.Assert.assertEquals;
+import static io.restassured.RestAssured.given;
 
 import java.io.File;
 

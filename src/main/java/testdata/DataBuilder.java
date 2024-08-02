@@ -20,6 +20,19 @@ public class DataBuilder {
 		return bodyBuilder;
 	}
 	
-
+	@SuppressWarnings("unchecked")
+	public static JSONObject buildToken() {
+		
+		String user = PropertiesFileProcessor
+				.readPropertiesFile("user", "credentials.properties");		
+		String pass = PropertiesFileProcessor
+				.readPropertiesFile("pass", "credentials.properties");
+		
+		JSONObject tokenBuilder = new JSONObject();
+		tokenBuilder.put("user", user);
+		tokenBuilder.put("pass", pass);
+		
+		return tokenBuilder;
+	}
 
 }
