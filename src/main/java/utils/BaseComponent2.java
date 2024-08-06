@@ -10,6 +10,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import report.utils.ExtentManager;
 import testdata.DataBuilder;
 
 import static io.restassured.RestAssured.given;
@@ -20,6 +21,16 @@ public class BaseComponent2 {
 	public static ResponseSpecification responseSpec;
 	String token;
 
+	@BeforeSuite
+	public void beforeSuite() {
+		ExtentManager.setExtent();
+	}
+	
+	@AfterSuite
+	public void afterSuite() {
+		ExtentManager.endReport();
+	}
+	
 	
 	@BeforeClass
 	public void setup() {

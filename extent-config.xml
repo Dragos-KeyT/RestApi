@@ -41,6 +41,6 @@
     <testViewChartLocation>bottom</testViewChartLocation>
 
     <!-- custom styles -->
-    <theme>light</theme>
+    <theme>dark</theme>
   </configuration>
 </extentreports>
