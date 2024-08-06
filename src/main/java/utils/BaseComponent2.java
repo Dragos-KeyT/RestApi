@@ -1,6 +1,8 @@
 package utils;
 
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
@@ -17,6 +19,7 @@ public class BaseComponent2 {
 	public static RequestSpecification requestSpec;
 	public static ResponseSpecification responseSpec;
 	String token;
+
 	
 	@BeforeClass
 	public void setup() {
